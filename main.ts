@@ -20,12 +20,20 @@ neopixelStrip.show()
 basic.forever(function () {
   // light level is <= 51
   if (input.lightLevel() <= 51) {
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
-    neopixelStrip.show()
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
   }
+  // light level is > 52
+  if (input.lightLevel() > 52) {
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+   }
   // light level is > 104
   if (input.lightLevel() > 104) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
