@@ -53,7 +53,7 @@ basic.forever(function () {
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.show()
   }
-  
+
   // light level is > 208
   if (input.lightLevel() > 208) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
